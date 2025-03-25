@@ -90,7 +90,7 @@ class TestSerializerFunctions(TestCase):
         }
 
     def test_serialize_car(self):
-        car = Car(**self.payload)
+        car = Car.objects.create(**self.payload)
         result = '{"id":1,"manufacturer":"Audi","model":"A4","horse_powers":200,' \
                  '"is_broken":true,"problem_description":"test description"}'
 
